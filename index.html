@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="#" id="formulaire">
+                
+                <img src="./images/user.png" alt="" id="user">
+                <h1>Inscrivez-vous</h1>
+                <p>Créez un compte gratuit sur Futur Digital</p>
+                <span id="erreur"></span>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Nom complet" id="nom">
+                    <span class="legend" id="legendName">Nom complet</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" placeholder="Adresse e-mail" id="mail">
+                    <span class="legend" id="legendEmail">E-mail</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Mot de passe" id="pass">
+                    <!-- les identifiants commençant par legend on pour rôle de signaler les erreurs à l'utilisateur -->
+                    <span class="legend" id="legendPass">Mot de passe</span>
+                    <div class="eye eyes1">
+                        <img src="./images/eye-off.svg" alt="" id="hide"><img src="./images/eye.svg" alt="" id="show">
+                    </div>
+                </div>
+                <span id="notice">le mot de passe doit comporter entre 4 et 6 caractères</span>
+                
+                <div class="input-group">
+                    <input type="password" placeholder="Confirmer le mot de passe" id="conf_pass">
+                    <span class="legend" id="legendConf">Confirmer le mot de passe</span>
+                    <div class="eye eyes2">
+                        <img src="./images/eye-off.svg" alt="" id="hide2"><img src="./images/eye.svg" alt="" id="show2">
+                    </div>
+                </div>
+                
+                <div class="cond"><input type="checkbox" value="accept"> 
+                    <span id="accept"> J'accepte les <a href="#">conditions générales</a></span>
+                </div>
+
+                <input type="submit" value="S'inscrire" id="ok">
+            </form>
+        </div>
+        <div class="img"><img src="./images/contact.png" alt=""></div>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

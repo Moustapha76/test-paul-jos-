@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafcfd !important;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    filter: drop-shadow(1px 1px 4px rgb(161, 157, 157));
+}
+.form,
+.img{
+    width: 320px;
+    height: 450px;
+    margin-top: 10%;
+}
+img{
+    width: 120%;
+    height:100%;
+    object-fit: cover;
+}
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: white;
+    height: 420px;
+}
+form #user{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translateX(20%) translateY(-90%);
+    border-radius: 2px;
+    color: white;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.247);
+}
+form h1{
+    font-size: 16px;
+    opacity: .7;
+    margin-top: 20px;
+}
+form p{
+    font-size: 12px;
+    margin: 8px 0px 10px 0px;
+    opacity: .8;
+}
+form .input-group{
+    margin: 4px 0px;
+    position: relative;
+}
+form .input-group input{
+    width: 90%;
+}
+form #notice{
+    font-size: 10px;
+    margin: 0px 0px 5px 20px;
+    color: rgb(161, 157, 157);
+}
+form input{
+    padding: 12px 10px;
+    margin: 4px 0px;
+    border-radius: 4px;
+    border: 2px solid #c9c4c4;
+    font-size: 12px;
+}
+form input:focus,
+form input:hover{
+    outline: none;
+    border: 2px solid rgb(253, 58, 90);
+    color: rgb(253, 58, 90);
+}
+form .legend{
+    position: absolute;
+    left: 0;
+    transform: translateX(20px) translateY(-25%);
+    background-color: white;
+    padding: 4px 7px;
+    font-size: 10px;
+    visibility: hidden;
+    z-index: 3;
+}
+form input:focus + .legend,
+form input:hover + .legend{
+    visibility: visible;
+    color: rgb(253, 58, 90);
+}
+form input[type="submit"]{
+    background-color: rgb(253, 58, 90);
+    border: 2px solid rgb(253, 58, 90);
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+form input[type="checkbox"]{
+    cursor: pointer;
+}
+form #accept{
+    margin-left: 7px;
+    font-size: 12px;
+    color: rgb(82, 80, 80);
+}
+form span{
+    font-size: 10px;
+}
+form .cond{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+form .cond a{
+    color: red;
+}
+form #erreur{
+    color: rgb(253, 58, 90);
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form .input-group .eye{
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    top: 0%;
+    right: 10%;
+    transform: translateY(40%);
+}
+form .input-group .eye img{
+    width: 20px;
+    height: 20px;
+    opacity: .5;
+    display: block;
+    position: absolute;
+    transform: translate(-90%,80%);
+    cursor: pointer;
+    z-index: 100;
+}
+#hide,#hide2{
+    display: none;
+}
+
+/* Responsivite */
+@media screen and (max-width: 900px) {
+    .container{
+        flex-direction: column;
+        position: relative;
+    }
+    .form,
+    .img{
+       position: absolute;
+       top: 0%;
+       left: 0%;
+       transform: translate(-50%,-50%);
+    }
+    .form{
+        z-index: 100;
+    }
+    img{
+        width: 100%;
+    }
+    form{
+        color: white;
+        height: 380px;
+        margin: 20px;
+       background-color: rgba(14, 8, 8, 0.397);
+    }
+    form input{
+        border: 2px solid white;
+        padding: 8px 10px;
+        margin: 2px 0px;
+    }
+    form input[type="submit"]{
+        padding: 10px;
+    }
+    form #accept{
+        color: rgb(204, 196, 196);
+    }
+    form .legend{
+        transform: translateX(20px) translateY(-40%);
+        border-radius: 2px;
+    }
+}
